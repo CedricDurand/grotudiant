@@ -4,38 +4,72 @@
         <meta charset="UTF-8">
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="{{asset('css/styles.css')}}" />
         <title>{% block title %}Grotudiant - {{ pageTitle }}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
         {% block nav %}
-        <nav>
-        <div class="nav-wrapper light-blue darken-4">
-          <a href="/" class="brand-logo"><img class="responsive-img" style="width: 50px;" src="{{asset('images/groland.png')}}"  alt="Groland Logo"></a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
-          <ul class="right hide-on-med-and-down">
+          <nav>
+            <div class="nav-wrapper light-blue darken-4">
+              <a href="/" class="brand-logo">Grotudiant</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="#">Connexion</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <ul class="sidenav" id="mobile-demo">
             <li><a href="#">Connection</a></li>
           </ul>
-        </div>
-      </nav>
-
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Connection</a></li>
-      </ul>
 
         {% endblock %}
         {% block body %}
           {% block pageTitle %}{% endblock %}
           {% block content %}{% endblock %}
+
+
+          <!-- Pour que le footer soit fixé en bas (voir css) -->
+          {% block main %}
+            <main></main>
+          {% endblock %}
+
+          {% block footer %}
+                <footer class="page-footer light-blue darken-4" >
+                    <div class="container">
+                      <div class="row">
+                        <div class="col l6 s12">
+                          <h5 class="white-text">Groréseau sociaux</h5>
+                          <p class="grey-text text-lighten-4">"Santé Bonheur ! Santé bonne humeur !"</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                          <h5 class="white-text">Grosociaux</h5>
+                          <ul>
+                            <li><a href="https://twitter.com/groland?lang=fr" class="twitter-follow-button" data-show-count="false">Tweet</a></li>
+                            <li><div class="g-ytsubscribe" data-channel="GrolandCANAL" data-layout="default" data-count="default"></div></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="footer-copyright">
+                      <div class="container">
+                      © 2019 Copyright Grotudiant
+                      </div>
+                    </div>
+                  </footer>
+
+          {% endblock %}
         {% endblock %}
         {% block javascripts %}
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-          document.addEventListener('DOMContentLoaded', function() {
-              var elems = document.querySelectorAll('.sidenav');
-              var instances = M.Sidenav.init(elems, options);
-            });
-        </script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, options);
+              });
+          </script>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script src="https://apis.google.com/js/platform.js"></script>
         {% endblock %}
     </body>
 </html>
