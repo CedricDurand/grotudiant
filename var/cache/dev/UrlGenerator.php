@@ -18,4 +18,5 @@ return [
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
     'index_blog' => [[], ['_controller' => 'App\\Controller\\BlogController::index'], [], [['text', '/']], [], []],
     'info_blog' => [['id'], ['_controller' => 'App\\Controller\\BlogController::detail'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/post']], [], []],
+    'get_post' => [['url'], ['_controller' => 'App\\Controller\\BlogController::getPost'], [], [['variable', '/', '[^/]++', 'url', true], ['text', '/get']], [], []],
 ];

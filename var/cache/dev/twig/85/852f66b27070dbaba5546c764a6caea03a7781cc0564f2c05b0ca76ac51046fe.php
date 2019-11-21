@@ -33,7 +33,7 @@ class __TwigTemplate_061a4e66469dff2ee3bd74673147634a5ca9d1e5c3c8a95549ff0a15d68
             'body' => [$this, 'block_body'],
             'pageTitle' => [$this, 'block_pageTitle'],
             'content' => [$this, 'block_content'],
-            'article' => [$this, 'block_article'],
+            'getPost' => [$this, 'block_getPost'],
             'main' => [$this, 'block_main'],
             'footer' => [$this, 'block_footer'],
             'javascripts' => [$this, 'block_javascripts'],
@@ -181,7 +181,7 @@ class __TwigTemplate_061a4e66469dff2ee3bd74673147634a5ca9d1e5c3c8a95549ff0a15d68
         $this->displayBlock('content', $context, $blocks);
         // line 31
         echo "          ";
-        $this->displayBlock('article', $context, $blocks);
+        $this->displayBlock('getPost', $context, $blocks);
         // line 32
         echo "
 
@@ -241,14 +241,14 @@ class __TwigTemplate_061a4e66469dff2ee3bd74673147634a5ca9d1e5c3c8a95549ff0a15d68
     }
 
     // line 31
-    public function block_article($context, array $blocks = [])
+    public function block_getPost($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "article"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "getPost"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "article"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "getPost"));
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -397,7 +397,7 @@ class __TwigTemplate_061a4e66469dff2ee3bd74673147634a5ca9d1e5c3c8a95549ff0a15d68
         {% block body %}
           {% block pageTitle %}{% endblock %}
           {% block content %}{% endblock %}
-          {% block article %}{% endblock %}
+          {% block getPost %}{% endblock %}
 
 
           <!-- Pour que le footer soit fixé en bas (voir css) -->

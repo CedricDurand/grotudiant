@@ -77,12 +77,24 @@ class __TwigTemplate_6ef353f31b5bd10789a3994a242dd55785bafa3c540d0cc53fbef11ee4f
             echo "    <li>";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "titre", [], "any", false, false, false, 8), "html", null, true);
             echo "</li>
+    <li>";
+            // line 9
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "content", [], "any", false, false, false, 9), "html", null, true);
+            echo "</li>
+    <li>";
+            // line 10
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "getUrlAlias", [], "method", false, false, false, 10), "html", null, true);
+            echo "</li>
+    <li>";
+            // line 11
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "published", [], "any", false, false, false, 11), "Y-m-d"), "html", null, true);
+            echo "</li>
   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 10
+        // line 13
         echo "</ul>
 
 ";
@@ -106,7 +118,7 @@ class __TwigTemplate_6ef353f31b5bd10789a3994a242dd55785bafa3c540d0cc53fbef11ee4f
 
     public function getDebugInfo()
     {
-        return array (  86 => 10,  77 => 8,  73 => 7,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  98 => 13,  90 => 11,  86 => 10,  82 => 9,  77 => 8,  73 => 7,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -119,6 +131,9 @@ class __TwigTemplate_6ef353f31b5bd10789a3994a242dd55785bafa3c540d0cc53fbef11ee4f
 <ul>
   {% for article in articles %}
     <li>{{ article.titre }}</li>
+    <li>{{ article.content }}</li>
+    <li>{{ article.getUrlAlias()}}</li>
+    <li>{{ article.published|date('Y-m-d') }}</li>
   {% endfor %}
 </ul>
 

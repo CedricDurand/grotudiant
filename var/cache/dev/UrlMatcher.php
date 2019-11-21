@@ -34,6 +34,7 @@ return [
                     .')'
                 .')'
                 .'|/post/([^/]++)(*:183)'
+                .'|/get/([^/]++)(*:204)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -44,8 +45,9 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        183 => [
-            [['_route' => 'info_blog', '_controller' => 'App\\Controller\\BlogController::detail'], ['id'], null, null, false, true, null],
+        183 => [[['_route' => 'info_blog', '_controller' => 'App\\Controller\\BlogController::detail'], ['id'], null, null, false, true, null]],
+        204 => [
+            [['_route' => 'get_post', '_controller' => 'App\\Controller\\BlogController::getPost'], ['url'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

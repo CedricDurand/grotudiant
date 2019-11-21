@@ -39,4 +39,16 @@ class BlogController extends AbstractController
         'article'=> $article
       ]);
     }
+
+    /**
+    * @Route("/get/{url}", name="get_post")
+    */
+    public function getPost(string $url){
+      $entityManager = $this->getDoctrine()->getRepository(Post::class);
+      $article = $entityManager->findOneBy(['url_alias'=>$url]);
+      return $this->render('blog/getPost.html.twig', [
+        'pageTitle' => 'accueil',
+        'article'=> $article,
+      ]);
+    }
 }
