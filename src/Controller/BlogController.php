@@ -30,9 +30,13 @@ class BlogController extends AbstractController
     */
     public function detail(int $id)
     {
+
+      $entityManager = $this->getDoctrine()->getRepository(Post::class);
+      $article = $entityManager->find($id);
       return $this->render('blog/detail.html.twig', [
         'id' => $id,
         'pageTitle' => $id,
+        'article'=> $article
       ]);
     }
 }

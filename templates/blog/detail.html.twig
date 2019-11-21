@@ -1,4 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block pageTitle %}<h1>La page de l'étudiant !</h1>{% endblock %}
-{% block content %}Le numéro de l'étudiant est : {{ id }}{% endblock %}
+{% block content %}Le numéro de l'étudiant est : {{ id }}
+
+<h2>{{ article.titre }}</h2>
+
+{% endblock %}

@@ -21,7 +21,7 @@ class AdminController extends AbstractController
        $post = new Post();
        $post->setTitre('Titre random : '.rand());
        $post->setContent('test'.rand());
-       $post->setUrlAlias("https://127.0.0.1:8000/post/".$post->getId());
+       $post->setUrlAlias("toto".rand());
        $post->setPublished(new \DateTime());
 
        // tell Doctrine you want to (eventually) save the Product (no queries yet)

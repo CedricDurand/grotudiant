@@ -22,7 +22,7 @@ class Post
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=80)
+     * @ORM\Column(type="string", length=80, unique=true)
      */
     private $url_alias;
 
