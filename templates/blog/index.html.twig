@@ -2,4 +2,11 @@
 
 {% block pageTitle %}
 <h3>Les étudiants de la principauté de GROLAND !!!</h3>
+
+<ul>
+  {% for article in articles %}
+    <li>{{ article.titre }}</li>
+  {% endfor %}
+</ul>
+
 {% endblock %}

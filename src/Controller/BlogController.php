@@ -2,6 +2,8 @@
 // src/Controller/BlogController.php
 namespace App\Controller;
 
+use App\Entity\Post;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,8 +14,14 @@ class BlogController extends AbstractController
     */
     public function index()
     {
+
+      $entityManager = $this->getDoctrine()->getRepository(Post::class);
+      $articles = $entityManager->findAll();
+
+
       return $this->render('blog/index.html.twig', [
         'pageTitle' => 'accueil',
+        'articles' => $articles
       ]);
     }
 
