@@ -4,12 +4,14 @@
 <h3>Les étudiants de la principauté de GROLAND !!!</h3>
 
 <ul>
-  {% for article in articles %}
-    <li>{{ article.titre }}</li>
-    <li>{{ article.content }}</li>
-    <li>{{ article.getUrlAlias()}}</li>
-    <li>{{ article.published|date('Y-m-d') }}</li>
-  {% endfor %}
+  {% if articles %}
+    {% for article in articles %}
+      <li>{{ article.titre }}</li>
+      <li>{{ article.content }}</li>
+      <li>{{ article.getUrlAlias()}}</li>
+      <li>{{ article.published|date('Y-m-d') }}</li>
+    {% endfor %}
+  {% endif %}
 </ul>
 
 {% endblock %}
