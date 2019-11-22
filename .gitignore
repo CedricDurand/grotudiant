@@ -4,9 +4,9 @@
 /.env.local.php
 /.env.*.local
 /public/bundles/
-/vendor/
+/vendor/*
 /var/log
-/var/cache
+/var/cache/*
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
