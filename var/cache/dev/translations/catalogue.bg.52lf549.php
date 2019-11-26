@@ -110,6 +110,11 @@ $catalogue = new MessageCatalogue('bg', array (
     'Account is disabled.' => 'Акаунта е деактивиран.',
     'Account is locked.' => 'Акаунта е заключен.',
   ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Предишна',
+    'label_next' => 'Следваща',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -227,6 +232,11 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Credentials have expired.' => 'Credentials have expired.',
     'Account is disabled.' => 'Account is disabled.',
     'Account is locked.' => 'Account is locked.',
+  ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Previous',
+    'label_next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

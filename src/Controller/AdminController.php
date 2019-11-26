@@ -8,13 +8,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
+//bundle à dl !
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\Request;
+
 class AdminController extends AbstractController
 {
 
     /**
      * @Route("/admin", name="admin")
      */
-    public function index()
+    public function index(Request $request, PaginatorInterface $paginator)
     {
 
        // $entityManager = $this->getDoctrine()->getManager();
@@ -31,10 +35,17 @@ class AdminController extends AbstractController
        // // actually executes the queries (i.e. the INSERT query)
        // $entityManager->flush();
 
-        $entityManager = $this->getDoctrine()->getRepository(Post::class);
-        $articles = $entityManager->findAll();
 
-        return $this->render('admin/index.html.twig', [
+        $entityManager = $this->getDoctrine()->getRepository(Post::class);
+        $donnees = $entityManager->createQueryBuilder("posts");
+
+        $articles = $paginator->paginate(
+            $donnees, // Requête contenant les données à paginer (ici nos articles)
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            10 // Nombre de résultats par page
+        );
+
+        return $this->render('admin/admin.html.twig', [
             'controller_name' => 'AdminController',
             'articles' => $articles
         ]);
