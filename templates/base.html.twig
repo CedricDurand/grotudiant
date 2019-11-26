@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('css/styles.css')}}" />
         <title>{% block title %}Grotudiant - {{ pageTitle }}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
@@ -62,7 +63,6 @@
 
           {% endblock %}
         {% endblock %}
-        {% block javascripts %}
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
             document.addEventListener('DOMContentLoaded', function() {
                 var elems = document.querySelectorAll('.sidenav');
@@ -71,6 +71,6 @@
           </script>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <script src="https://apis.google.com/js/platform.js"></script>
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
