@@ -1,17 +1,36 @@
 {% extends 'base.html.twig' %}
 
 {% block pageTitle %}
-<h3>Les étudiants de la principauté de GROLAND !!!</h3>
+<center><h4>Articles d'étudiants de la principauté de GROLAND !!!</h4></center>
 
-<ul>
+
   {% if articles %}
+      <div class="row">
+        <div class="col s6  offset-s1 ">
     {% for article in articles %}
-      <li>{{ article.titre }}</li>
-      <li>{{ article.content }}</li>
+
+          <div class="col s12 m10 l5" >
+            <div class="card small blue darken-3">
+              <div class="card-content white-text">
+                <span class="card-title">{{ article.titre }}</span>
+                <u>Publié le :</u> <b>{{article.published|date('Y-m-d')}} </b><br><br>
+                <p>{{ article.content |length > 110 ? article.content|slice(0, 110) ~ ' ...' : article.content}}</p>
+              </div>
+              <div class="card-action">
+                <a href="/post/{{ article.id }}">Je veux lire !</a>
+              </div>
+            </div>
+          </div>
+
+
+      <!-- <li>{{ article.titre }}</li>
+      <li>{{ article.content}}</li>
       <li>{{ article.getUrlAlias()}}</li>
-      <li>{{ article.published|date('Y-m-d') }}</li>
+      <li>{{ article.published|date('Y-m-d') }}</li> -->
     {% endfor %}
+          </div>
+      </div>
   {% endif %}
-</ul>
+
 
 {% endblock %}
