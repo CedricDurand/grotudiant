@@ -1,36 +1,38 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/card.css') }}" />
+{% endblock %}
+
 {% block pageTitle %}
-<center><h4>Articles d'étudiants de la principauté de GROLAND !!!</h4></center>
+<center><h4>Articles d'étudiants de la principauté de GROLAND !!!</h4></center><br><br>
+{% if articles %}
+<div class="container">
 
-
-  {% if articles %}
-      <div class="row">
-        <div class="col s6  offset-s1 ">
-    {% for article in articles %}
-
-          <div class="col s12 m10 l5" >
-            <div class="card small blue darken-3">
-              <div class="card-content white-text">
-                <span class="card-title">{{ article.titre }}</span>
-                <u>Publié le :</u> <b>{{article.published|date('Y-m-d')}} </b><br><br>
-                <p>{{ article.content |length > 110 ? article.content|slice(0, 110) ~ ' ...' : article.content}}</p>
-              </div>
-              <div class="card-action">
-                <a href="/post/{{ article.id }}">Je veux lire !</a>
-              </div>
+  {% for article in articles %}
+  <div class="row">
+      <div class="col s12 m6 l7">
+          <div class="card headline light-blue darken-2 z-depth-5">
+            <div class="card-content white-text">
+              <span class="card-title">{{ article.titre }}</span>
+              <u>Publié le :</u> <b><time>{{article.published|date('Y-m-d')}}</time></b><br><br>
+              <p>{{ article.content |length > 300 ? article.content|slice(0, 300) ~ ' ...' : article.content}}</p>
+            </div>
+            <div class="card-action">
+              <a href="/post/{{ article.id }}">Je veux lire !</a>
             </div>
           </div>
-
-
-      <!-- <li>{{ article.titre }}</li>
-      <li>{{ article.content}}</li>
-      <li>{{ article.getUrlAlias()}}</li>
-      <li>{{ article.published|date('Y-m-d') }}</li> -->
-    {% endfor %}
-          </div>
+        </div>
       </div>
-  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
 
 
+
+{% block javascripts %}
+<script>
+  ScrollReveal().reveal('.headline', { delay: 250, easing: 'ease-in', distance: '50px'});
+</script>
+{% endblock %}
 {% endblock %}

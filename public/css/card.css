@@ -1,0 +1,9 @@
+.card{
+  border-radius: 30px;
+}
+
+.card-action{
+  margin-top: 3em;
+  border-radius: 30px;
+  background-color: orange;
+}

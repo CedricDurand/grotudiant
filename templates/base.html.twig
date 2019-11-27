@@ -6,18 +6,27 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('css/styles.css')}}" />
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"> </script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
         <title>{% block title %}Grotudiant - {{ pageTitle }}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+      <header>
+
         {% block nav %}
           <nav>
-            <div class="nav-wrapper light-blue darken-4">
+            <div class="button-collapse nav-wrapper light-blue darken-4">
               <a href="/" class="brand-logo center">Grotudiant</a>
             </div>
           </nav>
 
         {% endblock %}
+
+      </header>
         {% block body %}
           {% block pageTitle %}{% endblock %}
           {% block content %}{% endblock %}
@@ -27,8 +36,14 @@
           <!-- Pour que le footer soit fixé en bas (voir css) -->
           {% block main %}
             <main></main>
-          {% endblock %}
 
+            <!-- back to TOP ! -->
+          {% endblock %}
+          <div class="fixed-action-btn">
+            <a id="back-to-top" class="btn-floating btn-large blue scale-transition">
+              <i class="large material-icons">keyboard_arrow_up</i>
+            </a>
+          </div>
           {% block footer %}
                 <footer class="page-footer light-blue darken-4" >
                     <div class="container">
@@ -55,14 +70,11 @@
 
           {% endblock %}
         {% endblock %}
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-            document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.sidenav');
-                var instances = M.Sidenav.init(elems, options);
-              });
-          </script>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <script src="https://apis.google.com/js/platform.js"></script>
-        {% block javascripts %}{% endblock %}
+
     </body>
+    <script src="{{ asset('js/scrollTop.js') }}"></script>
+
+    {% block javascripts %}
+
+    {% endblock %}
 </html>
