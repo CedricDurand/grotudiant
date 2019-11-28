@@ -16,7 +16,7 @@ class BlogController extends AbstractController
     {
 
       $entityManager = $this->getDoctrine()->getRepository(Post::class);
-      $articles = $entityManager->findAll();
+      $articles = $entityManager->findBy(array(), array('published' => 'DESC'));
 
 
       return $this->render('blog/index.html.twig', [
