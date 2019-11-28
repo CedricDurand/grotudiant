@@ -5,13 +5,15 @@
 {% endblock %}
 
 {% block pageTitle %}
-<center><h4>Articles d'étudiants de la principauté de GROLAND !!!</h4></center><br><br>
+<center><h4>Articles d'étudiants de la principauté de GROLAND !!!</h4></center><br>
+{% endblock %}
+{% block content %}
 {% if articles %}
 <div class="container">
-
-  {% for article in articles %}
   <div class="row">
-      <div class="col s12 m6 l7">
+      <div class="col s6 m6 l7">
+  {% for article in articles %}
+        <div class="row">
           <div class="card headline light-blue darken-2 z-depth-5">
             <div class="card-content white-text">
               <span class="card-title">{{ article.titre }}</span>
@@ -23,16 +25,20 @@
             </div>
           </div>
         </div>
-      </div>
   {% endfor %}
+      </div>
+      <div class="twitter col s5 m5">
+                <a class="twitter-timeline" data-lang="fr" data-width="400" data-height="700" data-theme="dark" data-link-color="#01579b" href="https://twitter.com/Groland?ref_src=twsrc%5Etfw">Tweets by Groland</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
 </div>
-{% endif %}
 
+{% endif %}
+{% endblock %}
 
 
 {% block javascripts %}
 <script>
   ScrollReveal().reveal('.headline', { delay: 250, easing: 'ease-in', distance: '50px'});
 </script>
-{% endblock %}
 {% endblock %}
