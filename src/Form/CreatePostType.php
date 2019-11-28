@@ -16,7 +16,8 @@ class CreatePostType extends AbstractType
         $builder
             ->add('titre',TextType::class)
             ->add('content',TextType::class)
-            ->add('save',SubmitType::class)
+            ->add('url_alias',TextType::class)
+            ->add('Enregistrer',SubmitType::class)
         ;
     }
 
