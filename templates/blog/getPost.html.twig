@@ -1,7 +1,0 @@
-{% extends 'base.html.twig' %}
-{% block getPost %}
-<h2>{{ article.titre }}</h2>
-<p>{{ article.content }}<p>
-<li>{{ article.getUrlAlias()}}</li>
-<footer>{{ article.published|date('Y-m-d') }}<footer>
-{% endblock %}

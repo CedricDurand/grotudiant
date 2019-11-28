@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-<center><h4>Articles d'étudiants de la principauté de GROLAND !!!</h4></center><br>
+<h4>Articles d'étudiants de la principauté de GROLAND !!!</h4>
 {% endblock %}
 {% block content %}
 {% if articles %}
@@ -21,7 +21,7 @@
               <p>{{ article.content |length > 300 ? article.content|slice(0, 300) ~ ' ...' : article.content}}</p>
             </div>
             <div class="card-action">
-              <a href="/post/{{ article.id }}">Je veux lire !</a>
+              <a href="/post/{{ article.getUrlAlias() }}">Je veux lire !</a>
             </div>
           </div>
         </div>

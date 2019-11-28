@@ -5,10 +5,12 @@
 {% endblock %}
 
 {% block title %}Administration{% endblock %}
-
+{% block pageTitle %}
+<h2><i>Gérez vos articles !</i></h2>
+{% endblock %}
 {% block content %}
 <section>
-  <h2 id="center"><i>Gérez vos articles !</i></h2>
+
   {% if articles %}
   <table class="highlight centered responsive-table s12 m4 l10">
     <thead>
@@ -26,7 +28,7 @@
           <td>{{ article.id }}</td>
           <td>{{ article.titre }}</td>
           <td>{{ article.published|date('Y-m-d') }}</td>
-          <td><a href="/post/{{ article.id }}">{{ article.getUrlAlias()}}</a></td>
+          <td><a href="/post/{{ article.getUrlAlias() }}">{{ article.getUrlAlias()}}</a></td>
           <td><a class="waves-effect waves-light btn-small orange accent-3"><i class="material-icons left ">edit</i>Modifier (TODO)</a> <a class="waves-effect waves-light btn-small red darken-1" href="{{ path('suppression', {id: article.id}) }}">Supprimer<i class="material-icons right">delete_forever</i></a></td>
       </tr>
       {% endfor %}

@@ -8,10 +8,6 @@
   text-align: center;
 }
 
-#center{
-  text-align: center;
-}
-
 table.highlight>tbody>tr:hover {
     background-color: rgba(189,189,189, 0.35);      /* whatever color you want */
 }
