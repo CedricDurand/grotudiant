@@ -98,6 +98,24 @@ $catalogue = new MessageCatalogue('vi', array (
     'This form should not contain extra fields.' => 'Mẫu này không nên chứa trường mở rộng',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Tập tin tải lên quá lớn. Vui lòng thử lại với tập tin nhỏ hơn.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF token không hợp lệ. Vui lòng thử lại.',
+    'fos_user.username.already_used' => 'Tên người dùng đã được sử dụng',
+    'fos_user.username.blank' => 'Xin vui lòng nhập tên người dùng',
+    'fos_user.username.short' => '[-Inf, Inf] Các tên tài khoản quá ngắn',
+    'fos_user.username.long' => '[-Inf, Inf] Tên người dùng quá dài',
+    'fos_user.email.already_used' => 'Thư điện tử đã được sử dụng',
+    'fos_user.email.blank' => 'Vui lòng nhập email',
+    'fos_user.email.short' => '[-Inf, Inf] Thư điện tử là quá ngắn',
+    'fos_user.email.long' => '[-Inf, Inf] Email quá dài',
+    'fos_user.email.invalid' => 'Các email không hợp lệ',
+    'fos_user.password.blank' => 'Vui lòng nhập mật khẩu',
+    'fos_user.password.short' => '[-Inf, Inf] Mật khẩu quá ngắn',
+    'fos_user.password.mismatch' => 'Các mật khẩu nhập không khớp',
+    'fos_user.new_password.blank' => 'Hãy nhập mật khẩu mới',
+    'fos_user.new_password.short' => '[-Inf, Inf] Mật khẩu mới là quá ngắn',
+    'fos_user.current_password.invalid' => 'Mật khẩu nhập không hợp lệ',
+    'fos_user.group.blank' => 'Hãy nhập tên',
+    'fos_user.group.short' => '[-Inf, Inf] Tên quá ngắn',
+    'fos_user.group.long' => '[-Inf, Inf] Tên quá dài',
   ),
   'security' => 
   array (
@@ -116,6 +134,50 @@ $catalogue = new MessageCatalogue('vi', array (
     'Credentials have expired.' => 'Thông tin xác thực đã hết hạn.',
     'Account is disabled.' => 'Tài khoản bị tạm ngừng.',
     'Account is locked.' => 'Tài khoản bị khóa.',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Nhóm cập nhật',
+    'group.show.name' => 'Tên nhóm',
+    'group.new.submit' => 'Tạo nhóm',
+    'group.flash.updated' => 'Nhóm đã được cập nhật',
+    'group.flash.created' => 'Nhóm đã được khởi tạo',
+    'group.flash.deleted' => 'Nhóm này đã bị xóa',
+    'security.login.username' => 'Tên đăng nhập:',
+    'security.login.password' => 'Mật khẩu:',
+    'security.login.remember_me' => 'Ghi nhớ thông tin của tôi',
+    'security.login.submit' => 'Đăng nhập',
+    'profile.show.username' => 'Tên đăng nhập',
+    'profile.show.email' => 'Email',
+    'profile.edit.submit' => 'Cập nhật',
+    'profile.flash.updated' => 'Hồ sơ cá nhân đã được cập nhật',
+    'change_password.submit' => 'Thay đổi mật khẩu',
+    'change_password.flash.success' => 'Mật khẩu đã được thay đổi',
+    'registration.check_email' => 'Một email đã được gửi đến %email%. Nó có chứa một liên kết kích hoạt bạn phải bấm vào để kích hoạt tài khoản của bạn.',
+    'registration.confirmed' => 'Chúc mừng %username%, tài khoản của bạn đã được kích hoạt.',
+    'registration.back' => 'Quay lại',
+    'registration.submit' => 'Đăng ký',
+    'registration.flash.user_created' => 'Người sử dụng đã được khởi tạo',
+    'registration.email.subject' => 'Chào mừng %username%!',
+    'registration.email.message' => 'Xin chào %username%! Để hoàn tất kích hoạt tài khoản của bạn - vui lòng truy cập %confirmationUrl% Cám ơn.',
+    'resetting.request.username' => 'Tên đăng nhập hoặc địa chỉ email:',
+    'resetting.request.submit' => 'Thiết lập lại mật khẩu',
+    'resetting.reset.submit' => 'Thay đổi mật khẩu',
+    'resetting.flash.success' => 'Các mật khẩu đã được thiết lập lại thành công',
+    'resetting.email.subject' => 'Thiết lập lại mật khẩu',
+    'resetting.email.message' => 'Xin chào %username%! Để thiết lập lại mật khẩu của bạn - vui lòng truy cập %confirmationUrl% Kính trọng, mỗi thành viên.',
+    'layout.logout' => 'Đăng xuất',
+    'layout.login' => 'Đăng nhập',
+    'layout.register' => 'Đăng ký',
+    'layout.logged_in_as' => 'Đăng nhập như %username%',
+    'form.group_name' => 'Tên nhóm:',
+    'form.username' => 'Tên đăng nhập:',
+    'form.email' => 'Email:',
+    'form.current_password' => 'Mật khẩu hiện tại:',
+    'form.password' => 'Mật khẩu:',
+    'form.password_confirmation' => 'Xác minh:',
+    'form.new_password' => 'Mật khẩu mới:',
+    'form.new_password_confirmation' => 'Xác minh:',
   ),
 ));
 
@@ -216,6 +278,25 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
+    'fos_user.username.already_used' => 'The username is already used.',
+    'fos_user.username.blank' => 'Please enter a username.',
+    'fos_user.username.short' => 'The username is too short.',
+    'fos_user.username.long' => 'The username is too long.',
+    'fos_user.email.already_used' => 'The email is already used.',
+    'fos_user.email.blank' => 'Please enter an email.',
+    'fos_user.email.short' => 'The email is too short.',
+    'fos_user.email.long' => 'The email is too long.',
+    'fos_user.email.invalid' => 'The email is not valid.',
+    'fos_user.password.blank' => 'Please enter a password.',
+    'fos_user.password.short' => 'The password is too short.',
+    'fos_user.password.mismatch' => 'The entered passwords don\'t match.',
+    'fos_user.new_password.blank' => 'Please enter a new password.',
+    'fos_user.new_password.short' => 'The new password is too short.',
+    'fos_user.current_password.invalid' => 'The entered password is invalid.',
+    'fos_user.group.blank' => 'Please enter a name.',
+    'fos_user.group.short' => 'The name is too short.',
+    'fos_user.group.long' => 'The name is too long.',
+    'fos_group.name.already_used' => 'The name is already used.',
   ),
   'security' => 
   array (
@@ -239,6 +320,70 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Update group',
+    'group.show.name' => 'Group name',
+    'group.new.submit' => 'Create group',
+    'group.flash.updated' => 'The group has been updated.',
+    'group.flash.created' => 'The group has been created.',
+    'group.flash.deleted' => 'The group has been deleted.',
+    'security.login.username' => 'Username',
+    'security.login.password' => 'Password',
+    'security.login.remember_me' => 'Remember me',
+    'security.login.submit' => 'Log in',
+    'profile.show.username' => 'Username',
+    'profile.show.email' => 'Email',
+    'profile.edit.submit' => 'Update',
+    'profile.flash.updated' => 'The profile has been updated.',
+    'change_password.submit' => 'Change password',
+    'change_password.flash.success' => 'The password has been changed.',
+    'registration.check_email' => 'An email has been sent to %email%. It contains an activation link you must click to activate your account.
+',
+    'registration.confirmed' => 'Congrats %username%, your account is now activated.',
+    'registration.back' => 'Back to the originating page.',
+    'registration.submit' => 'Register',
+    'registration.flash.user_created' => 'The user has been created successfully.',
+    'registration.email.subject' => 'Welcome %username%!',
+    'registration.email.message' => 'Hello %username%!
+
+To finish activating your account - please visit %confirmationUrl%
+
+This link can only be used once to validate your account.
+
+Regards,
+the Team.
+',
+    'resetting.check_email' => 'An email has been sent. It contains a link you must click to reset your password.
+Note: You can only request a new password once within %tokenLifetime% hours.
+
+If you don\'t get an email check your spam folder or try again.
+',
+    'resetting.request.username' => 'Username or email address',
+    'resetting.request.submit' => 'Reset password',
+    'resetting.reset.submit' => 'Change password',
+    'resetting.flash.success' => 'The password has been reset successfully.',
+    'resetting.email.subject' => 'Reset Password',
+    'resetting.email.message' => 'Hello %username%!
+
+To reset your password - please visit %confirmationUrl%
+
+Regards,
+the Team.
+',
+    'layout.logout' => 'Log out',
+    'layout.login' => 'Log in',
+    'layout.register' => 'Register',
+    'layout.logged_in_as' => 'Logged in as %username%',
+    'form.group_name' => 'Group name',
+    'form.username' => 'Username',
+    'form.email' => 'Email',
+    'form.current_password' => 'Current password',
+    'form.password' => 'Password',
+    'form.password_confirmation' => 'Repeat password',
+    'form.new_password' => 'New password',
+    'form.new_password_confirmation' => 'Repeat new password',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

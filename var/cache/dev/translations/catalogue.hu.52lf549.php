@@ -99,6 +99,25 @@ $catalogue = new MessageCatalogue('hu', array (
     'This form should not contain extra fields.' => 'Ez a mezőcsoport nem tartalmazhat extra mezőket.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'A feltöltött fájl túl nagy. Kérem, próbáljon egy kisebb fájlt feltölteni.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'Érvénytelen CSRF token. Kérem, próbálja újra elküldeni az űrlapot.',
+    'fos_user.username.already_used' => 'A felhasználónév már foglalt.',
+    'fos_user.username.blank' => 'A felhasználónév nem lehet üres.',
+    'fos_user.username.short' => 'A felhasználónév túl rövid.',
+    'fos_user.username.long' => 'A felhasználónév túl hosszú.',
+    'fos_user.email.already_used' => 'Az e-mail cím már használatban van.',
+    'fos_user.email.blank' => 'Az e-mail cím nem lehet üres.',
+    'fos_user.email.short' => 'Az e-mail cím túl rövid.',
+    'fos_user.email.long' => 'Az e-mail cím túl hosszú.',
+    'fos_user.email.invalid' => 'A megadott e-mail cím helytelen.',
+    'fos_user.password.blank' => 'A jelszó nem lehet üres.',
+    'fos_user.password.short' => 'A jelszó túl rövid.',
+    'fos_user.password.mismatch' => 'A megadott jelszavak nem egyeznek.',
+    'fos_user.new_password.blank' => 'Az új jelszó nem lehet üres.',
+    'fos_user.new_password.short' => 'Az új jelszó túl rövid.',
+    'fos_user.current_password.invalid' => 'A megadott jelszó helytelen.',
+    'fos_user.group.blank' => 'A név nem lehet üres.',
+    'fos_user.group.short' => 'A név túl rövid.',
+    'fos_user.group.long' => 'A név túl hosszú.',
+    'fos_group.name.already_used' => 'A név már foglalt.',
   ),
   'security' => 
   array (
@@ -122,6 +141,69 @@ $catalogue = new MessageCatalogue('hu', array (
   array (
     'label_previous' => 'Előző',
     'label_next' => 'Következő',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Csoport frissítése',
+    'group.show.name' => 'Csoport név',
+    'group.new.submit' => 'Csoport létrehozása',
+    'group.flash.updated' => 'A csoport frissítve.',
+    'group.flash.created' => 'A csoport létrehozva.',
+    'group.flash.deleted' => 'A csoport törölve.',
+    'security.login.username' => 'Felhasználónév',
+    'security.login.password' => 'Jelszó',
+    'security.login.remember_me' => 'Megjegyzés',
+    'security.login.submit' => 'Belépés',
+    'profile.show.username' => 'Felhasználónév',
+    'profile.show.email' => 'E-mail',
+    'profile.edit.submit' => 'Frissítés',
+    'profile.flash.updated' => 'A profil frissítve.',
+    'change_password.submit' => 'Jelszó megváltoztazása',
+    'change_password.flash.success' => 'A jelszó megváltoztatva.',
+    'registration.check_email' => 'A regisztrált fiók aktiválásához a megadott "%email%" címre küldött üzenetben lévő aktivációs linkre kell kattintani.',
+    'registration.confirmed' => 'Gratulálunk %username%, a regisztrált fiók sikeresen aktiválásra került.',
+    'registration.back' => 'Vissza az előző oldalra.',
+    'registration.submit' => 'Regisztráció',
+    'registration.flash.user_created' => 'A felhasználó sikeresen létrehozva.',
+    'registration.email.subject' => 'Üdvözöljük %username%!',
+    'registration.email.message' => 'Hello %username%!
+
+A regisztrált fiók a következő linkre kattintva aktiválható: %confirmationUrl%
+
+A link csak egyszer használható, rákattintás után ismételt felhasználása nem lehetséges.
+
+Üdvözlettel,
+a Csapat.
+',
+    'resetting.check_email' => 'Elfelejtett jelszava lecseréléséhez, kérjük, kattintson az e-mailben található linkre.
+Felhívjuk figyelmát rá, hogy a link érvényessége %tokenLifetime% óra múlva lejár.
+
+Amennyiben nem találja az e-mailt a postafiókjában, ellenőrizze a levélszemét mappát vagy kérje újra a kiküldést!
+',
+    'resetting.request.username' => 'Felhasználónév vagy e-mail cím',
+    'resetting.request.submit' => 'Jelszó lecserélése',
+    'resetting.reset.submit' => 'Jelszó megváltoztatása',
+    'resetting.flash.success' => 'A jelszó sikeresen lecserélve.',
+    'resetting.email.subject' => 'Jelszó lecserélése',
+    'resetting.email.message' => 'Hello %username%!
+
+A jelszó a következő oldalon cserélhető le: %confirmationUrl%
+
+Üdvözlettel,
+a Csapat.
+',
+    'layout.logout' => 'Kijelentkezés',
+    'layout.login' => 'Bejelentkezés',
+    'layout.register' => 'Regisztráció',
+    'layout.logged_in_as' => 'Belépve mint %username%',
+    'form.group_name' => 'Csoport név',
+    'form.username' => 'Felhasználónév',
+    'form.email' => 'E-mail',
+    'form.current_password' => 'Jelenlegi jelszó',
+    'form.password' => 'Jelszó',
+    'form.password_confirmation' => 'Jelszó megerősítése',
+    'form.new_password' => 'Új jelszó',
+    'form.new_password_confirmation' => 'Új jelszó megerősítése',
   ),
 ));
 
@@ -222,6 +304,25 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
+    'fos_user.username.already_used' => 'The username is already used.',
+    'fos_user.username.blank' => 'Please enter a username.',
+    'fos_user.username.short' => 'The username is too short.',
+    'fos_user.username.long' => 'The username is too long.',
+    'fos_user.email.already_used' => 'The email is already used.',
+    'fos_user.email.blank' => 'Please enter an email.',
+    'fos_user.email.short' => 'The email is too short.',
+    'fos_user.email.long' => 'The email is too long.',
+    'fos_user.email.invalid' => 'The email is not valid.',
+    'fos_user.password.blank' => 'Please enter a password.',
+    'fos_user.password.short' => 'The password is too short.',
+    'fos_user.password.mismatch' => 'The entered passwords don\'t match.',
+    'fos_user.new_password.blank' => 'Please enter a new password.',
+    'fos_user.new_password.short' => 'The new password is too short.',
+    'fos_user.current_password.invalid' => 'The entered password is invalid.',
+    'fos_user.group.blank' => 'Please enter a name.',
+    'fos_user.group.short' => 'The name is too short.',
+    'fos_user.group.long' => 'The name is too long.',
+    'fos_group.name.already_used' => 'The name is already used.',
   ),
   'security' => 
   array (
@@ -245,6 +346,70 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Update group',
+    'group.show.name' => 'Group name',
+    'group.new.submit' => 'Create group',
+    'group.flash.updated' => 'The group has been updated.',
+    'group.flash.created' => 'The group has been created.',
+    'group.flash.deleted' => 'The group has been deleted.',
+    'security.login.username' => 'Username',
+    'security.login.password' => 'Password',
+    'security.login.remember_me' => 'Remember me',
+    'security.login.submit' => 'Log in',
+    'profile.show.username' => 'Username',
+    'profile.show.email' => 'Email',
+    'profile.edit.submit' => 'Update',
+    'profile.flash.updated' => 'The profile has been updated.',
+    'change_password.submit' => 'Change password',
+    'change_password.flash.success' => 'The password has been changed.',
+    'registration.check_email' => 'An email has been sent to %email%. It contains an activation link you must click to activate your account.
+',
+    'registration.confirmed' => 'Congrats %username%, your account is now activated.',
+    'registration.back' => 'Back to the originating page.',
+    'registration.submit' => 'Register',
+    'registration.flash.user_created' => 'The user has been created successfully.',
+    'registration.email.subject' => 'Welcome %username%!',
+    'registration.email.message' => 'Hello %username%!
+
+To finish activating your account - please visit %confirmationUrl%
+
+This link can only be used once to validate your account.
+
+Regards,
+the Team.
+',
+    'resetting.check_email' => 'An email has been sent. It contains a link you must click to reset your password.
+Note: You can only request a new password once within %tokenLifetime% hours.
+
+If you don\'t get an email check your spam folder or try again.
+',
+    'resetting.request.username' => 'Username or email address',
+    'resetting.request.submit' => 'Reset password',
+    'resetting.reset.submit' => 'Change password',
+    'resetting.flash.success' => 'The password has been reset successfully.',
+    'resetting.email.subject' => 'Reset Password',
+    'resetting.email.message' => 'Hello %username%!
+
+To reset your password - please visit %confirmationUrl%
+
+Regards,
+the Team.
+',
+    'layout.logout' => 'Log out',
+    'layout.login' => 'Log in',
+    'layout.register' => 'Register',
+    'layout.logged_in_as' => 'Logged in as %username%',
+    'form.group_name' => 'Group name',
+    'form.username' => 'Username',
+    'form.email' => 'Email',
+    'form.current_password' => 'Current password',
+    'form.password' => 'Password',
+    'form.password_confirmation' => 'Repeat password',
+    'form.new_password' => 'New password',
+    'form.new_password_confirmation' => 'Repeat new password',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

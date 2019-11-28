@@ -90,6 +90,25 @@ $catalogue = new MessageCatalogue('id', array (
     'This form should not contain extra fields.' => 'Gabungan kolom tidak boleh mengandung kolom tambahan.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Berkas yang di unggah terlalu besar. Silahkan coba unggah berkas yang lebih kecil.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF-Token tidak sah. Silahkan coba kirim ulang formulir.',
+    'fos_user.username.already_used' => 'Nama pengguna telah digunakan.',
+    'fos_user.username.blank' => 'Masukkan nama pengguna.',
+    'fos_user.username.short' => 'Nama pengguna terlalu pendek.',
+    'fos_user.username.long' => 'Nama pengguna terlalu panjang.',
+    'fos_user.email.already_used' => 'Surel telah digunakan.',
+    'fos_user.email.blank' => 'Masukkan alamat surel.',
+    'fos_user.email.short' => 'Alamat surel terlalu pendek.',
+    'fos_user.email.long' => 'Alamat surel terlalu panjang.',
+    'fos_user.email.invalid' => 'Alamat surel salah.',
+    'fos_user.password.blank' => 'Masukkan kata sandi.',
+    'fos_user.password.short' => 'Kata sandi terlalu pendek.',
+    'fos_user.password.mismatch' => 'kata sandi yang anda masukkan tidak sama.',
+    'fos_user.new_password.blank' => 'Masukkan kata sandi baru.',
+    'fos_user.new_password.short' => 'Kata sandi baru anda terlalu pendek.',
+    'fos_user.current_password.invalid' => 'Kata sandi yang anda masukkan salah.',
+    'fos_user.group.blank' => 'Masukkan nama.',
+    'fos_user.group.short' => 'Nama terlalu pendek.',
+    'fos_user.group.long' => 'Nama terlalu panjang.',
+    'fos_group.name.already_used' => 'Nama telah digunakan.',
   ),
   'security' => 
   array (
@@ -113,6 +132,69 @@ $catalogue = new MessageCatalogue('id', array (
   array (
     'label_previous' => 'Sebelumnya',
     'label_next' => 'Berikutnya',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Memperbaharui Grup',
+    'group.show.name' => 'Nama Grup',
+    'group.new.submit' => 'Buat Grup',
+    'group.flash.updated' => 'Grup telah berhasil diperbaharui.',
+    'group.flash.created' => 'Grup telah berhasil ditambahkan.',
+    'group.flash.deleted' => 'Grup telah berhasil dihapus.',
+    'security.login.username' => 'Nama Pengguna',
+    'security.login.password' => 'Kata sandi',
+    'security.login.remember_me' => 'Ingat saya',
+    'security.login.submit' => 'Masuk',
+    'profile.show.username' => 'Nama Pengguna',
+    'profile.show.email' => 'Surel',
+    'profile.edit.submit' => 'Perbaharui',
+    'profile.flash.updated' => 'Profil telah berhasil diperbaharui',
+    'change_password.submit' => 'Ubah kata sandi',
+    'change_password.flash.success' => 'Kata sandi telah berhasil diubah.',
+    'registration.check_email' => 'Sebuah surel telah berhasil dikirimkan ke %email%. Anda harus mengklik tautan aktivasi di dalam surel tersebut untuk mengaktifkan akun anda.',
+    'registration.confirmed' => 'Selamat %username%, akun anda telah berhasil diaktifkan.',
+    'registration.back' => 'Kembali ke halaman sebelumnya.',
+    'registration.submit' => 'Daftar',
+    'registration.flash.user_created' => 'Pengguna telah berhasil ditambahkan.',
+    'registration.email.subject' => 'Selamat datang %username%!',
+    'registration.email.message' => 'Hallo %username%!
+
+Untuk menyelesaikan aktifasi akun anda, mohon kunjungi halaman berikut %confirmationUrl%
+
+Tautan ini hanya bisa digunakan sekali untuk akun anda.
+
+Hormat Kami,
+Tim Website.
+',
+    'resetting.check_email' => 'Sebuah surel telah dikirim. Anda harus mengklik tautan di dalam email tersebut agar dapat menata ulang kata sandi anda.
+Catatan: Anda hanya bisa meminta kata sandi baru dalam %tokenLifetime% jam.
+
+Apabila anda tidak menerima surel, cek spam atau ulangi kembali
+',
+    'resetting.request.username' => 'Nama pengguna atau alamat surel',
+    'resetting.request.submit' => 'Tata ulang kata sandi',
+    'resetting.reset.submit' => 'Ubah kata sandi',
+    'resetting.flash.success' => 'Kata sandi telah berhasil ditata ulang.',
+    'resetting.email.subject' => 'Tata ulang kata sandi',
+    'resetting.email.message' => 'Halo %username%!
+
+Untuk menata kata sandi anda mohon kunjungi halaman berikut %confirmationUrl%
+
+Hormat Kami,
+Tim Website.
+',
+    'layout.logout' => 'Keluar',
+    'layout.login' => 'Masuk',
+    'layout.register' => 'Pendaftaran',
+    'layout.logged_in_as' => 'Masuk sebagai %username%',
+    'form.group_name' => 'Nama Grup',
+    'form.username' => 'Nama Pengguna',
+    'form.email' => 'Surel',
+    'form.current_password' => 'Kata sandi saat ini',
+    'form.password' => 'Kata sandi',
+    'form.password_confirmation' => 'Ulangi kata sandi',
+    'form.new_password' => 'Kata sandi Baru',
+    'form.new_password_confirmation' => 'Ulangi kata sandi baru',
   ),
 ));
 
@@ -213,6 +295,25 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
+    'fos_user.username.already_used' => 'The username is already used.',
+    'fos_user.username.blank' => 'Please enter a username.',
+    'fos_user.username.short' => 'The username is too short.',
+    'fos_user.username.long' => 'The username is too long.',
+    'fos_user.email.already_used' => 'The email is already used.',
+    'fos_user.email.blank' => 'Please enter an email.',
+    'fos_user.email.short' => 'The email is too short.',
+    'fos_user.email.long' => 'The email is too long.',
+    'fos_user.email.invalid' => 'The email is not valid.',
+    'fos_user.password.blank' => 'Please enter a password.',
+    'fos_user.password.short' => 'The password is too short.',
+    'fos_user.password.mismatch' => 'The entered passwords don\'t match.',
+    'fos_user.new_password.blank' => 'Please enter a new password.',
+    'fos_user.new_password.short' => 'The new password is too short.',
+    'fos_user.current_password.invalid' => 'The entered password is invalid.',
+    'fos_user.group.blank' => 'Please enter a name.',
+    'fos_user.group.short' => 'The name is too short.',
+    'fos_user.group.long' => 'The name is too long.',
+    'fos_group.name.already_used' => 'The name is already used.',
   ),
   'security' => 
   array (
@@ -236,6 +337,70 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Update group',
+    'group.show.name' => 'Group name',
+    'group.new.submit' => 'Create group',
+    'group.flash.updated' => 'The group has been updated.',
+    'group.flash.created' => 'The group has been created.',
+    'group.flash.deleted' => 'The group has been deleted.',
+    'security.login.username' => 'Username',
+    'security.login.password' => 'Password',
+    'security.login.remember_me' => 'Remember me',
+    'security.login.submit' => 'Log in',
+    'profile.show.username' => 'Username',
+    'profile.show.email' => 'Email',
+    'profile.edit.submit' => 'Update',
+    'profile.flash.updated' => 'The profile has been updated.',
+    'change_password.submit' => 'Change password',
+    'change_password.flash.success' => 'The password has been changed.',
+    'registration.check_email' => 'An email has been sent to %email%. It contains an activation link you must click to activate your account.
+',
+    'registration.confirmed' => 'Congrats %username%, your account is now activated.',
+    'registration.back' => 'Back to the originating page.',
+    'registration.submit' => 'Register',
+    'registration.flash.user_created' => 'The user has been created successfully.',
+    'registration.email.subject' => 'Welcome %username%!',
+    'registration.email.message' => 'Hello %username%!
+
+To finish activating your account - please visit %confirmationUrl%
+
+This link can only be used once to validate your account.
+
+Regards,
+the Team.
+',
+    'resetting.check_email' => 'An email has been sent. It contains a link you must click to reset your password.
+Note: You can only request a new password once within %tokenLifetime% hours.
+
+If you don\'t get an email check your spam folder or try again.
+',
+    'resetting.request.username' => 'Username or email address',
+    'resetting.request.submit' => 'Reset password',
+    'resetting.reset.submit' => 'Change password',
+    'resetting.flash.success' => 'The password has been reset successfully.',
+    'resetting.email.subject' => 'Reset Password',
+    'resetting.email.message' => 'Hello %username%!
+
+To reset your password - please visit %confirmationUrl%
+
+Regards,
+the Team.
+',
+    'layout.logout' => 'Log out',
+    'layout.login' => 'Log in',
+    'layout.register' => 'Register',
+    'layout.logged_in_as' => 'Logged in as %username%',
+    'form.group_name' => 'Group name',
+    'form.username' => 'Username',
+    'form.email' => 'Email',
+    'form.current_password' => 'Current password',
+    'form.password' => 'Password',
+    'form.password_confirmation' => 'Repeat password',
+    'form.new_password' => 'New password',
+    'form.new_password_confirmation' => 'Repeat new password',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);
