@@ -79,7 +79,6 @@ class AdminController extends AbstractController
       if($form->isSubmitted() && $form->isValid()){
         $newPost = $form->getData();
         $newPost->setPublished(new \DateTime('today'));
-        $newPost->setUrlAlias($newPost->getTitre());
 
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->persist($newPost);
