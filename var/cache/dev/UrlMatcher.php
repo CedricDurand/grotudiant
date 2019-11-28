@@ -14,6 +14,7 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
+        '/admin/add' => [[['_route' => 'ajout', '_controller' => 'App\\Controller\\AdminController::addPost'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index_blog', '_controller' => 'App\\Controller\\BlogController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

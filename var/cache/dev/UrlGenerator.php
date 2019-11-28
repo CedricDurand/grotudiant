@@ -17,6 +17,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin']], [], []],
     'suppression' => [['id'], ['_controller' => 'App\\Controller\\AdminController::delUser'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/del']], [], []],
+    'ajout' => [[], ['_controller' => 'App\\Controller\\AdminController::addPost'], [], [['text', '/admin/add']], [], []],
     'index_blog' => [[], ['_controller' => 'App\\Controller\\BlogController::index'], [], [['text', '/']], [], []],
     'info_blog' => [['id'], ['_controller' => 'App\\Controller\\BlogController::detail'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/post']], [], []],
     'get_post' => [['url'], ['_controller' => 'App\\Controller\\BlogController::getPost'], [], [['variable', '/', '[^/]++', 'url', true], ['text', '/get']], [], []],

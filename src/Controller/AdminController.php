@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Post;
+use App\Form\CreatePostType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -64,5 +65,31 @@ class AdminController extends AbstractController
         $entityManager->flush();
 
         return $this->redirectToRoute('admin');
+    }
+
+    /**
+     * @Route("/admin/add", name="ajout")
+     */
+    function addPost(Request $request){
+      $newPost = new Post();
+
+      $form = $this->createform(CreatePostType::class,$newPost);
+
+      $form->handleRequest($request);
+      if($form->isSubmitted() && $form->isValid()){
+        $newPost = $form->getData();
+        $newPost->setPublished(new \DateTime('today'));
+        $newPost->setUrlAlias($newPost->getTitre());
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($newPost);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('index_blog');
+      }
+
+      return $this->render('admin/createPost.html.twig',[
+        'form'=>$form->createView(),
+      ]);
     }
 }
