@@ -21,14 +21,37 @@
           <nav>
             <div class="button-collapse nav-wrapper light-blue darken-4">
               <a href="/" class="brand-logo center">Grotudiant</a>
+              {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              {% endif %}
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <li><a href="{{ path('admin') }}">
+                      Pannel admin
+                    </a></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}">
+                      Déconnecter {{ app.user.username }}
+                    </a></li>
+                {% endif %}
+              </ul>
             </div>
           </nav>
-
+           {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+           <ul class="sidenav" id="mobile-demo">
+                 <li><a href="{{ path('admin') }}">
+                   Pannel admin
+                 </a></li>
+                 <li><a href="{{ path('fos_user_security_logout') }}">
+                   Déconnecter {{ app.user.username }}</a></li>
+           </ul>
+           {% endif %}
         {% endblock %}
 
       </header>
         {% block body %}
+
           <center>{% block pageTitle %}{% endblock %}</center>
+
           {% block content %}{% endblock %}
 
           <!-- Pour que le footer soit fixé en bas (voir css) -->
@@ -68,7 +91,6 @@
 
     </body>
     <script src="{{ asset('js/scrollTop.js') }}"></script>
-
     {% block javascripts %}
 
     {% endblock %}

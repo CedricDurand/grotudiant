@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  // plugin initializations etc.
-  $(".button-collapse").sideNav();
+  // plugin initializations etc.  
+  $('.sidenav').sidenav();
 });
 
 if ($('#back-to-top').length) {

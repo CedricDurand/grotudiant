@@ -22,21 +22,6 @@ class AdminController extends AbstractController
     public function index(Request $request, PaginatorInterface $paginator)
     {
 
-       // $entityManager = $this->getDoctrine()->getManager();
-       //
-       // $post = new Post();
-       // $post->setTitre('Titre random : '.rand());
-       // $post->setContent('test'.rand());
-       // $post->setUrlAlias("toto".rand());
-       // $post->setPublished(new \DateTime());
-       //
-       // // tell Doctrine you want to (eventually) save the Product (no queries yet)
-       // $entityManager->persist($post);
-       //
-       // // actually executes the queries (i.e. the INSERT query)
-       // $entityManager->flush();
-
-
         $entityManager = $this->getDoctrine()->getRepository(Post::class);
         $donnees = $entityManager->createQueryBuilder("posts");
 
@@ -68,6 +53,33 @@ class AdminController extends AbstractController
     }
 
     /**
+     * @Route("/admin/modif/{id}", name="modification")
+     */
+    function modifUser(Request $request, int $id)
+    {
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository(Post::class);
+        $article = $repository->find($id);
+        $form = $this->createform(CreatePostType::class,$article);
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+
+          $article = $form->getData();
+          $article->setPublished(new \DateTime('today'));
+          $entityManager->flush();
+
+          return $this->redirectToRoute('admin');
+        }
+
+        return $this->render('admin/updatePost.html.twig',[
+          'form'=>$form->createView(),
+        ]);
+    }
+
+    /**
      * @Route("/admin/add", name="ajout")
      */
     function addPost(Request $request){
@@ -84,7 +96,7 @@ class AdminController extends AbstractController
         $entityManager->persist($newPost);
         $entityManager->flush();
 
-        return $this->redirectToRoute('index_blog');
+        return $this->redirectToRoute('admin');
       }
 
       return $this->render('admin/createPost.html.twig',[
