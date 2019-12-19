@@ -110,6 +110,60 @@ $catalogue = new MessageCatalogue('lb', array (
     'Account is disabled.' => 'De Konto ass deaktivéiert.',
     'Account is locked.' => 'De Konto ass gespaart.',
   ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Grupp aktualiséieren',
+    'group.show.name' => 'Gruppennumm',
+    'group.new.submit' => 'Grupp creéieren',
+    'group.flash.updated' => 'D\'Grupp gouf aktualiséiert.',
+    'group.flash.created' => 'D\'Grupp gouf creéiert.',
+    'group.flash.deleted' => 'D\'Grupp gouf geläscht.',
+    'security.login.username' => 'Benotzernumm',
+    'security.login.password' => 'Passwuert',
+    'security.login.remember_me' => 'U mech erënneren',
+    'security.login.submit' => 'Umellen',
+    'profile.show.username' => 'Benotzernumm',
+    'profile.show.email' => 'E-Mail',
+    'profile.edit.submit' => 'Benotzer aktualiséieren',
+    'profile.flash.updated' => 'De Benotzerprofil gouf aktualiséiert.',
+    'change_password.submit' => 'Passwuert ännern',
+    'change_password.flash.success' => 'D\'Passwuert gouf geännert.',
+    'registration.check_email' => 'Eng E-Mail gouf un %email% geschéckt. Se enthält e Link deen s Du uklicke muss, fir Däi Benotzerkonto ze bestätegen.',
+    'registration.confirmed' => 'Gléckwonsch %username%, Däi Benutzerkonto ass elo bestätegt.',
+    'registration.submit' => 'Registréieren',
+    'registration.flash.user_created' => 'De Benotzer gouf erfollegräich creéiert.',
+    'registration.email.subject' => 'Wëllkomm %username%!',
+    'registration.email.message' => 'Hallo %username%!
+
+Fir Däi Benotzerkonto ze bestätegen, besich wann ech gelift d\'Säit %confirmationUrl%
+
+Mat beschte Gréiss,
+d\'Equipe.
+',
+    'resetting.request.username' => 'Benotzernumm',
+    'resetting.request.submit' => 'Passwuert zerécksetzen',
+    'resetting.reset.submit' => 'Passwuert ännern',
+    'resetting.flash.success' => 'D\'Passwuert gouf erfollegräich zeréckgesat.',
+    'resetting.email.message' => 'Hallo %username%!
+
+Fir Däi Passwuert zeréckzesetzen, besich wann ech gelift d\'Säit %confirmationUrl%
+
+Mat beschte Gréiss,
+d\'Equipe.
+',
+    'layout.logout' => 'Ofmellen',
+    'layout.login' => 'Umellen',
+    'layout.register' => 'Registréieren',
+    'layout.logged_in_as' => 'Ugemellt als %username%',
+    'form.group_name' => 'Gruppennumm',
+    'form.username' => 'Benotzernumm',
+    'form.email' => 'E-Mail-Adress',
+    'form.current_password' => 'Aktuellt Passwuert',
+    'form.password' => 'Passwuert',
+    'form.password_confirmation' => 'Bestätegung',
+    'form.new_password' => 'Neit Passwuert',
+    'form.new_password_confirmation' => 'Bestätegung',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -209,6 +263,25 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
+    'fos_user.username.already_used' => 'The username is already used.',
+    'fos_user.username.blank' => 'Please enter a username.',
+    'fos_user.username.short' => 'The username is too short.',
+    'fos_user.username.long' => 'The username is too long.',
+    'fos_user.email.already_used' => 'The email is already used.',
+    'fos_user.email.blank' => 'Please enter an email.',
+    'fos_user.email.short' => 'The email is too short.',
+    'fos_user.email.long' => 'The email is too long.',
+    'fos_user.email.invalid' => 'The email is not valid.',
+    'fos_user.password.blank' => 'Please enter a password.',
+    'fos_user.password.short' => 'The password is too short.',
+    'fos_user.password.mismatch' => 'The entered passwords don\'t match.',
+    'fos_user.new_password.blank' => 'Please enter a new password.',
+    'fos_user.new_password.short' => 'The new password is too short.',
+    'fos_user.current_password.invalid' => 'The entered password is invalid.',
+    'fos_user.group.blank' => 'Please enter a name.',
+    'fos_user.group.short' => 'The name is too short.',
+    'fos_user.group.long' => 'The name is too long.',
+    'fos_group.name.already_used' => 'The name is already used.',
   ),
   'security' => 
   array (
@@ -227,6 +300,75 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Credentials have expired.' => 'Credentials have expired.',
     'Account is disabled.' => 'Account is disabled.',
     'Account is locked.' => 'Account is locked.',
+  ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Previous',
+    'label_next' => 'Next',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Update group',
+    'group.show.name' => 'Group name',
+    'group.new.submit' => 'Create group',
+    'group.flash.updated' => 'The group has been updated.',
+    'group.flash.created' => 'The group has been created.',
+    'group.flash.deleted' => 'The group has been deleted.',
+    'security.login.username' => 'Username',
+    'security.login.password' => 'Password',
+    'security.login.remember_me' => 'Remember me',
+    'security.login.submit' => 'Log in',
+    'profile.show.username' => 'Username',
+    'profile.show.email' => 'Email',
+    'profile.edit.submit' => 'Update',
+    'profile.flash.updated' => 'The profile has been updated.',
+    'change_password.submit' => 'Change password',
+    'change_password.flash.success' => 'The password has been changed.',
+    'registration.check_email' => 'An email has been sent to %email%. It contains an activation link you must click to activate your account.
+',
+    'registration.confirmed' => 'Congrats %username%, your account is now activated.',
+    'registration.back' => 'Back to the originating page.',
+    'registration.submit' => 'Register',
+    'registration.flash.user_created' => 'The user has been created successfully.',
+    'registration.email.subject' => 'Welcome %username%!',
+    'registration.email.message' => 'Hello %username%!
+
+To finish activating your account - please visit %confirmationUrl%
+
+This link can only be used once to validate your account.
+
+Regards,
+the Team.
+',
+    'resetting.check_email' => 'An email has been sent. It contains a link you must click to reset your password.
+Note: You can only request a new password once within %tokenLifetime% hours.
+
+If you don\'t get an email check your spam folder or try again.
+',
+    'resetting.request.username' => 'Username or email address',
+    'resetting.request.submit' => 'Reset password',
+    'resetting.reset.submit' => 'Change password',
+    'resetting.flash.success' => 'The password has been reset successfully.',
+    'resetting.email.subject' => 'Reset Password',
+    'resetting.email.message' => 'Hello %username%!
+
+To reset your password - please visit %confirmationUrl%
+
+Regards,
+the Team.
+',
+    'layout.logout' => 'Log out',
+    'layout.login' => 'Log in',
+    'layout.register' => 'Register',
+    'layout.logged_in_as' => 'Logged in as %username%',
+    'form.group_name' => 'Group name',
+    'form.username' => 'Username',
+    'form.email' => 'Email',
+    'form.current_password' => 'Current password',
+    'form.password' => 'Password',
+    'form.password_confirmation' => 'Repeat password',
+    'form.new_password' => 'New password',
+    'form.new_password_confirmation' => 'Repeat new password',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

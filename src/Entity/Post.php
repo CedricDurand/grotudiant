@@ -4,8 +4,11 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
+ * @UniqueEntity("url_alias", message="L'alias {{ value }} est déjà pris !")
  */
 class Post
 {

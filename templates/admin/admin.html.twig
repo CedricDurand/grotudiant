@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/tab.css') }}" />
+{% endblock %}
+
+{% block title %}Administration{% endblock %}
+{% block pageTitle %}
+<h2><i>Gérez vos articles !</i></h2>
+{% endblock %}
+{% block content %}
+<section>
+  <h4> Créer un article -> <a class="waves-effect waves-light btn-small green" href="{{ path('ajout')}}"><i class="material-icons right ">add_circle_outline</i>GO !</a></h4>
+  {% if articles %}
+  <table class="highlight centered responsive-table s12 m4 l10">
+    <thead>
+      <tr>
+        <th>{{ knp_pagination_sortable(articles, 'ID', 'posts.id') }}</th>
+        <th>{{ knp_pagination_sortable(articles, 'Titre', 'posts.titre') }}</th>
+        <th>{{ knp_pagination_sortable(articles, 'Date de publication', 'posts.published') }}</th>
+        <th>{{ knp_pagination_sortable(articles, 'Lien', 'posts.url_alias') }}</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for article in articles %}
+      <tr>
+          <td>{{ article.id }}</td>
+          <td>{{ article.titre }}</td>
+          <td>{{ article.published|date('Y-m-d') }}</td>
+          <td><a href="/post/{{ article.getUrlAlias() }}">{{ article.getUrlAlias()}}</a></td>
+          <td><a class="waves-effect waves-light btn-small orange accent-3"  href="{{ path('modification', {id: article.id}) }}" ><i class="material-icons left ">edit</i>Modifier</a> <a class="waves-effect waves-light btn-small red darken-1" href="{{ path('suppression', {id: article.id}) }}">Supprimer<i class="material-icons right">delete_forever</i></a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {{ knp_pagination_render(articles) }}
+  {% else %}
+  <p>Vous avez aucun article en ligne !</p>
+  {% endif %}
+
+</section>
+{% endblock %}

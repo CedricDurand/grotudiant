@@ -91,6 +91,24 @@ $catalogue = new MessageCatalogue('lv', array (
     'This form should not contain extra fields.' => 'Šajā veidlapā nevajadzētu būt papildus ievades laukiem.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Augšupielādētā faila izmērs bija par lielu. Lūdzu mēģiniet augšupielādēt mazāka izmēra failu.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'Dotais CSRF talons nav derīgs. Lūdzu mēģiniet vēlreiz iesniegt veidlapu.',
+    'fos_user.username.already_used' => 'Šis lietotājvārds jau ir aizņemts.',
+    'fos_user.username.blank' => 'Lūdzu ievadiet lietotājvārdu.',
+    'fos_user.username.short' => 'Lietotājvārds ir pārāk īss.',
+    'fos_user.username.long' => 'Lietotājvārds ir pārāk garš.',
+    'fos_user.email.already_used' => 'Šis e-pasts jau ir aizņemts.',
+    'fos_user.email.blank' => 'Lūdzu ievadiet e-pastu.',
+    'fos_user.email.short' => 'E-pasts ir pārāk īss.',
+    'fos_user.email.long' => 'E-pasts ir pārāk garš.',
+    'fos_user.email.invalid' => 'E-pasts nav derīgs.',
+    'fos_user.password.blank' => 'Lūdzu ievadiet paroli.',
+    'fos_user.password.short' => 'Parole ir pārāk īsa.',
+    'fos_user.new_password.blank' => 'Lūdzu ievadiet jaunu paroli.',
+    'fos_user.new_password.short' => 'Jaunā parole ir pārāk īsa.',
+    'fos_user.current_password.invalid' => 'Ievadītā parole nav pareiza.',
+    'fos_user.group.blank' => 'Lūdzu ievadiet nosaukumu.',
+    'fos_user.group.short' => 'Nosaukums ir pārāk īss.',
+    'fos_user.group.long' => 'Nosaukums ir pārāk garš.',
+    'fos_group.name.already_used' => 'Šis nosaukums tiek jau izmantots.',
   ),
   'security' => 
   array (
@@ -109,6 +127,62 @@ $catalogue = new MessageCatalogue('lv', array (
     'Credentials have expired.' => 'Autentifikācijas datu derīguma termiņš ir beidzies.',
     'Account is disabled.' => 'Konts ir atspējots.',
     'Account is locked.' => 'Konts ir slēgts.',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Saglabāt izmaiņas',
+    'group.show.name' => 'Grupas nosaukums',
+    'group.new.submit' => 'Izveidot grupu',
+    'group.flash.updated' => 'Grupa tika atjaunināta.',
+    'group.flash.created' => 'Grupa tika izveidota.',
+    'group.flash.deleted' => 'Grupa tika dzēsta.',
+    'security.login.username' => 'Lietotājvārds',
+    'security.login.password' => 'Parole',
+    'security.login.remember_me' => 'Atcerēties mani',
+    'security.login.submit' => 'Ienākt',
+    'profile.show.username' => 'Lietotājvārds',
+    'profile.show.email' => 'E-pasts',
+    'profile.edit.submit' => 'Saglabāt',
+    'profile.flash.updated' => 'Profila izmaiņas tika saglabātas.',
+    'change_password.submit' => 'Nomainīt paroli',
+    'change_password.flash.success' => 'Parole tika nomainīta.',
+    'registration.check_email' => 'Uz %email% tika nosūtīts e-pasts ar aktivizācijas saiti. Lūdzu sekojiet tai, lai aktivizētu savu kontu.',
+    'registration.confirmed' => 'Apsveicam, %username%, tavs konts tika aktivizēts!',
+    'registration.back' => 'Atpakaļ uz sākotnējo lapu.',
+    'registration.submit' => 'Reģistrēties',
+    'registration.flash.user_created' => 'Lietotājs tika izveidots.',
+    'registration.email.subject' => 'Sveiki, %username%!',
+    'registration.email.message' => 'Sveiks, %username%!
+
+Lai pabeigtu aktivizēt savu kontu, lūdzu apmeklē %confirmationUrl%
+
+Jauku dienu,
+lapas kolektīvs.
+',
+    'resetting.request.username' => 'Lietotājvārds vai e-pasta adrese',
+    'resetting.request.submit' => 'Atiestatīt paroli',
+    'resetting.reset.submit' => 'Nomainīt paroli',
+    'resetting.flash.success' => 'Parole tika atiestatīta.',
+    'resetting.email.subject' => 'Paroles atiestatīšana',
+    'resetting.email.message' => 'Sveiki, %username%!
+
+Lai atiestatītu savu paroli, lūdzu apmeklē %confirmationUrl%
+
+Jauku dienu,
+lapas kolektīvs.
+',
+    'layout.logout' => 'Iziet',
+    'layout.login' => 'Ienākt',
+    'layout.register' => 'Reģistrēties',
+    'layout.logged_in_as' => 'Autorizējies kā %username%',
+    'form.group_name' => 'Grupas nosaukums',
+    'form.username' => 'Lietotājvārds',
+    'form.email' => 'E-pasts',
+    'form.current_password' => 'Esošā parole',
+    'form.password' => 'Parole',
+    'form.password_confirmation' => 'Atkārtoti',
+    'form.new_password' => 'Jaunā parole',
+    'form.new_password_confirmation' => 'Atkārtoti',
   ),
 ));
 
@@ -209,6 +283,25 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
+    'fos_user.username.already_used' => 'The username is already used.',
+    'fos_user.username.blank' => 'Please enter a username.',
+    'fos_user.username.short' => 'The username is too short.',
+    'fos_user.username.long' => 'The username is too long.',
+    'fos_user.email.already_used' => 'The email is already used.',
+    'fos_user.email.blank' => 'Please enter an email.',
+    'fos_user.email.short' => 'The email is too short.',
+    'fos_user.email.long' => 'The email is too long.',
+    'fos_user.email.invalid' => 'The email is not valid.',
+    'fos_user.password.blank' => 'Please enter a password.',
+    'fos_user.password.short' => 'The password is too short.',
+    'fos_user.password.mismatch' => 'The entered passwords don\'t match.',
+    'fos_user.new_password.blank' => 'Please enter a new password.',
+    'fos_user.new_password.short' => 'The new password is too short.',
+    'fos_user.current_password.invalid' => 'The entered password is invalid.',
+    'fos_user.group.blank' => 'Please enter a name.',
+    'fos_user.group.short' => 'The name is too short.',
+    'fos_user.group.long' => 'The name is too long.',
+    'fos_group.name.already_used' => 'The name is already used.',
   ),
   'security' => 
   array (
@@ -227,6 +320,75 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Credentials have expired.' => 'Credentials have expired.',
     'Account is disabled.' => 'Account is disabled.',
     'Account is locked.' => 'Account is locked.',
+  ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Previous',
+    'label_next' => 'Next',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Update group',
+    'group.show.name' => 'Group name',
+    'group.new.submit' => 'Create group',
+    'group.flash.updated' => 'The group has been updated.',
+    'group.flash.created' => 'The group has been created.',
+    'group.flash.deleted' => 'The group has been deleted.',
+    'security.login.username' => 'Username',
+    'security.login.password' => 'Password',
+    'security.login.remember_me' => 'Remember me',
+    'security.login.submit' => 'Log in',
+    'profile.show.username' => 'Username',
+    'profile.show.email' => 'Email',
+    'profile.edit.submit' => 'Update',
+    'profile.flash.updated' => 'The profile has been updated.',
+    'change_password.submit' => 'Change password',
+    'change_password.flash.success' => 'The password has been changed.',
+    'registration.check_email' => 'An email has been sent to %email%. It contains an activation link you must click to activate your account.
+',
+    'registration.confirmed' => 'Congrats %username%, your account is now activated.',
+    'registration.back' => 'Back to the originating page.',
+    'registration.submit' => 'Register',
+    'registration.flash.user_created' => 'The user has been created successfully.',
+    'registration.email.subject' => 'Welcome %username%!',
+    'registration.email.message' => 'Hello %username%!
+
+To finish activating your account - please visit %confirmationUrl%
+
+This link can only be used once to validate your account.
+
+Regards,
+the Team.
+',
+    'resetting.check_email' => 'An email has been sent. It contains a link you must click to reset your password.
+Note: You can only request a new password once within %tokenLifetime% hours.
+
+If you don\'t get an email check your spam folder or try again.
+',
+    'resetting.request.username' => 'Username or email address',
+    'resetting.request.submit' => 'Reset password',
+    'resetting.reset.submit' => 'Change password',
+    'resetting.flash.success' => 'The password has been reset successfully.',
+    'resetting.email.subject' => 'Reset Password',
+    'resetting.email.message' => 'Hello %username%!
+
+To reset your password - please visit %confirmationUrl%
+
+Regards,
+the Team.
+',
+    'layout.logout' => 'Log out',
+    'layout.login' => 'Log in',
+    'layout.register' => 'Register',
+    'layout.logged_in_as' => 'Logged in as %username%',
+    'form.group_name' => 'Group name',
+    'form.username' => 'Username',
+    'form.email' => 'Email',
+    'form.current_password' => 'Current password',
+    'form.password' => 'Password',
+    'form.password_confirmation' => 'Repeat password',
+    'form.new_password' => 'New password',
+    'form.new_password_confirmation' => 'Repeat new password',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

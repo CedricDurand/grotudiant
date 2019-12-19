@@ -16,7 +16,7 @@ class BlogController extends AbstractController
     {
 
       $entityManager = $this->getDoctrine()->getRepository(Post::class);
-      $articles = $entityManager->findAll();
+      $articles = $entityManager->findBy(array(), array('published' => 'DESC'));
 
 
       return $this->render('blog/index.html.twig', [
@@ -26,29 +26,22 @@ class BlogController extends AbstractController
     }
 
     /**
-    * @Route("/post/{id}", name="info_blog")
+    * @Route("/post/{alias}", name="info_blog")
     */
-    public function detail(int $id)
+    public function detail(string $alias)
     {
 
       $entityManager = $this->getDoctrine()->getRepository(Post::class);
-      $article = $entityManager->find($id);
-      return $this->render('blog/detail.html.twig', [
-        'id' => $id,
-        'pageTitle' => $id,
-        'article'=> $article
-      ]);
-    }
+      $article = $entityManager->findOneBy(['url_alias' => $alias]);
 
-    /**
-    * @Route("/get/{url}", name="get_post")
-    */
-    public function getPost(string $url){
-      $entityManager = $this->getDoctrine()->getRepository(Post::class);
-      $article = $entityManager->findOneBy(['url_alias'=>$url]);
-      return $this->render('blog/getPost.html.twig', [
-        'pageTitle' => 'accueil',
-        'article'=> $article,
+      if($article == null){
+        return $this->redirectToRoute('index_blog');
+      }
+
+      return $this->render('blog/detail.html.twig', [
+        'alias' => $alias,
+        'pageTitle' => $alias,
+        'article'=> $article
       ]);
     }
 }

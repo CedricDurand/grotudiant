@@ -1,8 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block pageTitle %}<h1>La page de l'étudiant !</h1>{% endblock %}
-{% block content %}Le numéro de l'étudiant est : {{ id }}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/article.css') }}" />
+{% endblock %}
 
-<h2>{{ article.titre }}</h2>
+
+{% block pageTitle %}<h1>Ce magnifique GROARTICLE</h1>{% endblock %}
+{% block content %}
+
+<div class="container article">
+  <article class="s12 m4 l10">
+    <h2>{{ article.titre }}</h2>
+    <U><h5>Date de publication : <time>{{article.published|date('Y-m-d')}}</time></h5></U>
+    {{ article.content }}
+  </article>
+</div>
 
 {% endblock %}

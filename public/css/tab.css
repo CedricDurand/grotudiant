@@ -1,0 +1,17 @@
+.pagination>li.active {
+  background: #01579b;
+  border-radius: 5px;
+}
+
+.pagination{
+  margin-top: 1em;
+  text-align: center;
+}
+
+table.highlight>tbody>tr:hover {
+    background-color: rgba(189,189,189, 0.35);      /* whatever color you want */
+}
+
+table thead tr {
+    background: rgba(189,189,189);
+}

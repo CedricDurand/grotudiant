@@ -1,0 +1,8 @@
+# app/config/fos_user.yaml
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: App\Entity\User
+    from_email:
+        address: "ced.ced@fr"
+        sender_name: "ced.ced@fr"

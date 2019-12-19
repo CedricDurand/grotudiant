@@ -91,6 +91,25 @@ $catalogue = new MessageCatalogue('zh_CN', array (
     'This form should not contain extra fields.' => '该表单中不可有额外字段.',
     'The uploaded file was too large. Please try to upload a smaller file.' => '上传文件太大， 请重新尝试上传一个较小的文件.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF 验证符无效， 请重新提交.',
+    'fos_user.username.already_used' => '用户名已存在',
+    'fos_user.username.blank' => '请输入用户名',
+    'fos_user.username.short' => '用户名字数不够',
+    'fos_user.username.long' => '用户名字数超出限制',
+    'fos_user.email.already_used' => '邮箱已被使用',
+    'fos_user.email.blank' => '请输入邮箱',
+    'fos_user.email.short' => '邮箱字数不够',
+    'fos_user.email.long' => '邮箱字数超出限制',
+    'fos_user.email.invalid' => '邮箱格式不正确',
+    'fos_user.password.blank' => '请输入密码',
+    'fos_user.password.short' => '密码字数不够',
+    'fos_user.password.mismatch' => '两次输入密码不一致',
+    'fos_user.new_password.blank' => '请输入新密码',
+    'fos_user.new_password.short' => '新密码字数不够',
+    'fos_user.current_password.invalid' => '密码格式不正确',
+    'fos_user.group.blank' => '请输入小组名称',
+    'fos_user.group.short' => '小组名称字数不够',
+    'fos_user.group.long' => '小组名称字数超出限制',
+    'fos_group.name.already_used' => '此名称已在使用',
   ),
   'security' => 
   array (
@@ -109,6 +128,62 @@ $catalogue = new MessageCatalogue('zh_CN', array (
     'Credentials have expired.' => '凭证已过期。',
     'Account is disabled.' => '帐号已被禁用。',
     'Account is locked.' => '帐号已被锁定。',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => '更新小组',
+    'group.show.name' => '小组名称',
+    'group.new.submit' => '创建小组',
+    'group.flash.updated' => '小组已被更新',
+    'group.flash.created' => '小组已创建',
+    'group.flash.deleted' => '小组已被删除',
+    'security.login.username' => '用户名',
+    'security.login.password' => '密码',
+    'security.login.remember_me' => '自动登录',
+    'security.login.submit' => '登录',
+    'profile.show.username' => '用户名',
+    'profile.show.email' => '电子邮箱',
+    'profile.edit.submit' => '更新',
+    'profile.flash.updated' => '用户信息已更新',
+    'change_password.submit' => '修改密码',
+    'change_password.flash.success' => '密码已成功修改',
+    'registration.check_email' => '系统向%email%发送了一封包含激活链接的邮件，请访问该链接以启用你的帐户。',
+    'registration.confirmed' => '%username%，恭喜你，你的帐户已启用！',
+    'registration.back' => '返回前一页面',
+    'registration.submit' => '注册',
+    'registration.flash.user_created' => '用户已创建',
+    'registration.email.subject' => '%username%，欢迎你',
+    'registration.email.message' => '%username%，你好！
+
+要启用你的用户帐号，请访问：%confirmationUrl%
+
+祝好
+网站团队
+',
+    'resetting.request.username' => '用户名或邮箱',
+    'resetting.request.submit' => '重置密码',
+    'resetting.reset.submit' => '修改密码',
+    'resetting.flash.success' => '密码已重置。',
+    'resetting.email.subject' => '重置密码',
+    'resetting.email.message' => '%username%，你好！
+
+请访问 %confirmationUrl% 以重置你的帐户密码。
+
+祝好
+网站团队
+',
+    'layout.logout' => '退出',
+    'layout.login' => '登录',
+    'layout.register' => '注册',
+    'layout.logged_in_as' => '已登录为：%username%',
+    'form.group_name' => '小组名称',
+    'form.username' => '用户名',
+    'form.email' => '电子邮箱',
+    'form.current_password' => '当前密码',
+    'form.password' => '密码',
+    'form.password_confirmation' => '确认密码',
+    'form.new_password' => '新密码',
+    'form.new_password_confirmation' => '确认新密码',
   ),
 ));
 
@@ -212,6 +287,25 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
+    'fos_user.username.already_used' => 'The username is already used.',
+    'fos_user.username.blank' => 'Please enter a username.',
+    'fos_user.username.short' => 'The username is too short.',
+    'fos_user.username.long' => 'The username is too long.',
+    'fos_user.email.already_used' => 'The email is already used.',
+    'fos_user.email.blank' => 'Please enter an email.',
+    'fos_user.email.short' => 'The email is too short.',
+    'fos_user.email.long' => 'The email is too long.',
+    'fos_user.email.invalid' => 'The email is not valid.',
+    'fos_user.password.blank' => 'Please enter a password.',
+    'fos_user.password.short' => 'The password is too short.',
+    'fos_user.password.mismatch' => 'The entered passwords don\'t match.',
+    'fos_user.new_password.blank' => 'Please enter a new password.',
+    'fos_user.new_password.short' => 'The new password is too short.',
+    'fos_user.current_password.invalid' => 'The entered password is invalid.',
+    'fos_user.group.blank' => 'Please enter a name.',
+    'fos_user.group.short' => 'The name is too short.',
+    'fos_user.group.long' => 'The name is too long.',
+    'fos_group.name.already_used' => 'The name is already used.',
   ),
   'security' => 
   array (
@@ -230,6 +324,75 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Credentials have expired.' => 'Credentials have expired.',
     'Account is disabled.' => 'Account is disabled.',
     'Account is locked.' => 'Account is locked.',
+  ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Previous',
+    'label_next' => 'Next',
+  ),
+  'FOSUserBundle' => 
+  array (
+    'group.edit.submit' => 'Update group',
+    'group.show.name' => 'Group name',
+    'group.new.submit' => 'Create group',
+    'group.flash.updated' => 'The group has been updated.',
+    'group.flash.created' => 'The group has been created.',
+    'group.flash.deleted' => 'The group has been deleted.',
+    'security.login.username' => 'Username',
+    'security.login.password' => 'Password',
+    'security.login.remember_me' => 'Remember me',
+    'security.login.submit' => 'Log in',
+    'profile.show.username' => 'Username',
+    'profile.show.email' => 'Email',
+    'profile.edit.submit' => 'Update',
+    'profile.flash.updated' => 'The profile has been updated.',
+    'change_password.submit' => 'Change password',
+    'change_password.flash.success' => 'The password has been changed.',
+    'registration.check_email' => 'An email has been sent to %email%. It contains an activation link you must click to activate your account.
+',
+    'registration.confirmed' => 'Congrats %username%, your account is now activated.',
+    'registration.back' => 'Back to the originating page.',
+    'registration.submit' => 'Register',
+    'registration.flash.user_created' => 'The user has been created successfully.',
+    'registration.email.subject' => 'Welcome %username%!',
+    'registration.email.message' => 'Hello %username%!
+
+To finish activating your account - please visit %confirmationUrl%
+
+This link can only be used once to validate your account.
+
+Regards,
+the Team.
+',
+    'resetting.check_email' => 'An email has been sent. It contains a link you must click to reset your password.
+Note: You can only request a new password once within %tokenLifetime% hours.
+
+If you don\'t get an email check your spam folder or try again.
+',
+    'resetting.request.username' => 'Username or email address',
+    'resetting.request.submit' => 'Reset password',
+    'resetting.reset.submit' => 'Change password',
+    'resetting.flash.success' => 'The password has been reset successfully.',
+    'resetting.email.subject' => 'Reset Password',
+    'resetting.email.message' => 'Hello %username%!
+
+To reset your password - please visit %confirmationUrl%
+
+Regards,
+the Team.
+',
+    'layout.logout' => 'Log out',
+    'layout.login' => 'Log in',
+    'layout.register' => 'Register',
+    'layout.logged_in_as' => 'Logged in as %username%',
+    'form.group_name' => 'Group name',
+    'form.username' => 'Username',
+    'form.email' => 'Email',
+    'form.current_password' => 'Current password',
+    'form.password' => 'Password',
+    'form.password_confirmation' => 'Repeat password',
+    'form.new_password' => 'New password',
+    'form.new_password_confirmation' => 'Repeat new password',
   ),
 ));
 $catalogueZh->addFallbackCatalogue($catalogueEn);
