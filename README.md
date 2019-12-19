@@ -6,11 +6,11 @@
 
 ## Compte et accès
 
-Allez dans *racine du site*/login pour vous conneceter en admin.
+Allez dans \**racine du site*\*/login pour vous conneceter en admin.
 - Pseudo : admin
 - Mot de passe : admin
 
-## Compte et accès
+## Commentaire
 
 Nous avons ajouté le bundle KnpPaginatorBundle permettant de réaliser une pagination sur notre tableau dans la partie admin.
 Il permet aussi de trier le tableau suivant la colonne voulu.
